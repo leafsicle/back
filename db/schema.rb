@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_18_172649) do
+ActiveRecord::Schema.define(version: 2018_11_18_195648) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,25 @@ ActiveRecord::Schema.define(version: 2018_11_18_172649) do
     t.string "frequency"
     t.boolean "paid"
     t.text "notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string "name"
+    t.date "due_date"
+    t.text "recurring"
+    t.integer "amount_due"
+    t.boolean "income"
+    t.boolean "was_paid"
+    t.text "notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "frequencies", force: :cascade do |t|
+    t.string "duration"
+    t.integer "days"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

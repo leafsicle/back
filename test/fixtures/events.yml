@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  due_date: 2018-11-18
+  recurring: MyText
+  amount_due: 1
+  income: false
+  was_paid: false
+  notes: MyText
+
+two:
+  name: MyString
+  due_date: 2018-11-18
+  recurring: MyText
+  amount_due: 1
+  income: false
+  was_paid: false
+  notes: MyText

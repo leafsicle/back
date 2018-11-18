@@ -33,6 +33,19 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+
+
+
+#Calendar Gems START here*******
+  #creates a Simple Calendar
+  gem "simple_calendar", "~> 2.0"
+  # creates recurring events
+  gem 'recurring_select', github: "RundownApp/recurring_select"
+
+#calendar Gems END here********************
+
+
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
