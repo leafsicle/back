@@ -1,2 +1,0 @@
-class Frequency < ApplicationRecord
-end
