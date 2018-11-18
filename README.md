@@ -1,24 +1,27 @@
-# README
+DATABASE
+Account -table
+-name
+-due date
+-income/expense
+-amount due
+-frequency
+-paid T/F?
+-monthly amount remaining\$
+-notes
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Paid -table
+-account
+-name
+-paid on date
+-paid T/F
 
-Things you may want to cover:
+## actions
 
-* Ruby version
+- map URL to action that interact with the model
 
-* System dependencies
+-users should have to log in to access information
+-users can add an account/bill
+-users can delete an account/bill from account table
+-users can mark bills as paid individually for the month
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+-admin can access all account
