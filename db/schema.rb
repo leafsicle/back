@@ -15,18 +15,6 @@ ActiveRecord::Schema.define(version: 2018_11_18_195648) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "accounts", force: :cascade do |t|
-    t.string "name"
-    t.date "due"
-    t.boolean "income"
-    t.integer "amount_due"
-    t.string "frequency"
-    t.boolean "paid"
-    t.text "notes"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "events", force: :cascade do |t|
     t.string "name"
     t.date "due_date"
@@ -38,31 +26,3 @@ ActiveRecord::Schema.define(version: 2018_11_18_195648) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
-  create_table "frequencies", force: :cascade do |t|
-    t.string "duration"
-    t.integer "days"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "histories", force: :cascade do |t|
-    t.bigint "account_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["account_id"], name: "index_histories_on_account_id"
-  end
-
-  create_table "paids", force: :cascade do |t|
-    t.bigint "account_id"
-    t.string "name"
-    t.date "paid_on"
-    t.string "paid"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["account_id"], name: "index_paids_on_account_id"
-  end
-
-  add_foreign_key "histories", "accounts"
-  add_foreign_key "paids", "accounts"
-end
