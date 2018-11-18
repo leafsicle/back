@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @account.name %>
+</p>
+
+<p>
+  <strong>Due:</strong>
+  <%= @account.due %>
+</p>
+
+<p>
+  <strong>Income:</strong>
+  <%= @account.income %>
+</p>
+
+<p>
+  <strong>Amount due:</strong>
+  <%= @account.amount_due %>
+</p>
+
+<p>
+  <strong>Frequency:</strong>
+  <%= @account.frequency %>
+</p>
+
+<p>
+  <strong>Paid:</strong>
+  <%= @account.paid %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @account.notes %>
+</p>
+
+<%= link_to 'Edit', edit_account_path(@account) %> |
+<%= link_to 'Back', accounts_path %>
