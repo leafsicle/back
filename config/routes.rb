@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :frequencies
   resources :histories
   resources :paids
   resources :accounts

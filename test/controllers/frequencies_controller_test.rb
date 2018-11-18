@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class FrequenciesControllerTest < ActionDispatch::IntegrationTest
+class iesControllerTest < ActionDispatch::IntegrationTest
   setup do
     @frequency = frequencies(:one)
   end
