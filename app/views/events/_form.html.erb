@@ -17,13 +17,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :due_date %>
-    <%= form.date_select :due_date %>
-  </div>
-
-  <div class="field">
-    <%= form.label :recurring %>
-    <%= form.select_recurring :recurring, nil, allow_balnk: true %>
+    <%= form.label :due_date_or_recurring_date %>
+    <%= form.select_recurring :recurring, nil, allow_blank: true %>
   </div>
 
   <div class="field">

@@ -40,7 +40,7 @@ gem 'jbuilder', '~> 2.5'
   #creates a Simple Calendar
   gem "simple_calendar", "~> 2.0"
   # creates recurring events
-  gem 'recurring_select', github: "RundownApp/recurring_select"
+gem 'recurring_select'
 
 #calendar Gems END here********************
 
