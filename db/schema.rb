@@ -27,13 +27,6 @@ ActiveRecord::Schema.define(version: 2018_11_18_172649) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "frequencies", force: :cascade do |t|
-    t.string "duration"
-    t.integer "days"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "histories", force: :cascade do |t|
     t.bigint "account_id"
     t.datetime "created_at", null: false
