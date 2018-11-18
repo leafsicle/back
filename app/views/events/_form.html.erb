@@ -16,10 +16,14 @@
     <%= form.text_field :name %>
   </div>
 
-  <div class="field">
-    <%= form.label :due_date_or_recurring_date %>
-    <%= form.select_recurring :recurring, nil, allow_blank: true %>
-  </div>
+<%# This sets the frequency %>
+    <div class="field">
+      <abbr title="select 'not recurring' if a one time expense. Select 'set schedule' to select frequency">
+        <%= form.label :due_date_or_recurring_date  %>
+      </abbr>
+      <%= form.select_recurring :recurring, nil, allow_blank: true %>
+    </div>
+
 
   <div class="field">
     <%= form.label :amount_due %>
