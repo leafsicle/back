@@ -31,19 +31,13 @@
       <%= form.check_box :was_paid %>
   </div>
 
-  <%# Was this paid or not paid for this month? %>
-  <%# <div class="field"> %>
-      <%# <%= form.label :start_date %>
-      <%# <%= form.date :start_date %> 
-  <%# </div> %>
-
   <%# How much is due for this bill for the current month? %>
   <div class="field">
     <%= form.label :amount_due %>
     $<%= form.number_field :amount_due%>
   </div>
 
-  <%# This will determine if this bill is given to or taken away from the current months total%>
+  <%# This will determine if this bill is ADDED or SUBTRACTED from the current total for the month%>
   <div class="field">
     <ul class="radios">
       <li>
