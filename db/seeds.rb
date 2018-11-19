@@ -5,5 +5,3 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
-event.create("event"=>{"name"=>"seed1", "recurring"=>"null", "was_paid"=>"1", "amount_due"=>"42", "flow"=>"income", "notes"=>"this was a note"}, "commit")
