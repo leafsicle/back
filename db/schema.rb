@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2018_11_18_195648) do
 
   create_table "events", force: :cascade do |t|
     t.string "name"
-    t.date "due_date"
+    # t.date "due_date"
     t.json "recurring", default: {}, null: false
     t.integer "amount_due"
     t.string "flow"
