@@ -11,40 +11,57 @@
     </div>
   <% end %>
 
+  <%# This is the name of the account that will display %>
   <div class="field">
     <%= form.label :name %>
     <%= form.text_field :name %>
   </div>
 
-<%# This sets the frequency %>
-    <div class="field">
-      <abbr title="select 'not recurring' if a one time expense. Select 'set schedule' to select frequency">
-        <%= form.label :due_date_or_recurring_date  %>
-      </abbr>
+  <%# This sets the frequency %>
+  <div class="field">
+    <abbr title="select 'not recurring' if a one time expense. Select 'set schedule' to select frequency">
+      <%= form.label :due_date_or_recurring_date  %>
       <%= form.select_recurring :recurring, nil, allow_blank: true %>
-    </div>
+    </abbr>
+  </div>
 
+  <%# Was this paid or not paid for this month? %>
+  <div class="field">
+      <%= form.label :was_paid %>
+      <%= form.check_box :was_paid %>
+  </div>
 
+  <%# Was this paid or not paid for this month? %>
+  <%# <div class="field"> %>
+      <%# <%= form.label :start_date %>
+      <%# <%= form.date :start_date %> 
+  <%# </div> %>
+
+  <%# How much is due for this bill for the current month? %>
   <div class="field">
     <%= form.label :amount_due %>
-    <%= form.number_field :amount_due %>
+    $<%= form.number_field :amount_due%>
   </div>
 
+  <%# This will determine if this bill is given to or taken away from the current months total%>
   <div class="field">
-    <%= form.label :income %>
-    <%= form.check_box :income %>
+    <ul class="radios">
+      <li>
+        <%= form.radio_button :flow, :income %> <%= form.label :flow_income, "Income" %>
+      </li>
+      <li>
+        <%= form.radio_button :flow, :expense %> <%= form.label :flow_expense, "Expense" %>
+      </li>
+    </ul>
   </div>
 
-  <div class="field">
-    <%= form.label :was_paid %>
-    <%= form.check_box :was_paid %>
-  </div>
-
+  <%# This is for the user to type notes about the account %>
   <div class="field">
     <%= form.label :notes %>
     <%= form.text_area :notes %>
   </div>
 
+  <%# sends the create request %>
   <div class="actions">
     <%= form.submit %>
   </div>

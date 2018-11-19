@@ -6,14 +6,7 @@ Account -table
 -amount due
 -frequency
 -paid T/F?
--monthly amount remaining\$
 -notes
-
-Paid -table
--account
--name
--paid on date
--paid T/F
 
 ## actions
 

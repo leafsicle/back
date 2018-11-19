@@ -18,11 +18,13 @@ ActiveRecord::Schema.define(version: 2018_11_18_195648) do
   create_table "events", force: :cascade do |t|
     t.string "name"
     t.date "due_date"
-    t.text "recurring"
+    t.json "recurring", default: {}, null: false
     t.integer "amount_due"
-    t.boolean "income"
+    t.string "flow"
     t.boolean "was_paid"
     t.text "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+end

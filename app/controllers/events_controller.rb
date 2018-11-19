@@ -1,4 +1,5 @@
 class EventsController < ApplicationController
+  before_action :intercept_null_recurring
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
   # GET /events
@@ -62,13 +63,18 @@ class EventsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_event
-      @event = Event.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def event_params
-      params.require(:event).permit(:name, :due_date, :recurring, :amount_due, :income, :was_paid, :notes)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_event
+    @event = Event.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def event_params
+    params.require(:event).permit(:name, :due_date, :recurring, :amount_due, :income, :was_paid, :notes, :flow)
+  end
+
+  def intercept_null_recurring
+    params[:event][:recurring] = {} if params[:event] && params[:event][:recurring] == 'null'
+  end
 end

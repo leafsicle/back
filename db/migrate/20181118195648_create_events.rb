@@ -3,9 +3,9 @@ class CreateEvents < ActiveRecord::Migration[5.2]
     create_table :events do |t|
       t.string :name
       t.date :due_date
-      t.text :recurring
+      t.json :recurring, null: false, default: {}
       t.integer :amount_due
-      t.boolean :income
+      t.string :flow
       t.boolean :was_paid
       t.text :notes
 
