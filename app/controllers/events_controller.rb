@@ -57,7 +57,7 @@ class EventsController < ApplicationController
   def destroy
     @event.destroy
     respond_to do |format|
-      format.html { redirect_to events_url, notice: 'Event was successfully destroyed.'}
+      format.html { redirect_to events_url, notice: 'Event was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -71,7 +71,7 @@ class EventsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def event_params
-    params.require(:event).permit(:name, :due_date, :recurring, :amount_due, :income, :was_paid, :notes, :flow)
+    params.require(:event).permit(:name, :due_date, :amount_due, :income, :was_paid, :notes, :flow, :recurring => {})
   end
 
   def intercept_null_recurring

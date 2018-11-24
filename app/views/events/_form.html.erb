@@ -17,10 +17,18 @@
     <%= form.text_field :name %>
   </div>
 
+<%# This is the when the bill needs to be paid
+<%= form_for :event do |f| %> 
+  <%# <div class="field"> %>
+    <%# form.label :due_date %>
+    <%# number_field(:due_date, :date, in: 1.0..31.0, step: 1.0) %>
+    <%#end%>
+  <%# </div> %> 
+
   <%# This sets the frequency %>
   <div class="field">
     <abbr title="select 'not recurring' if a one time expense. Select 'set schedule' to select frequency">
-      <%= form.label :due_date_or_recurring_date  %>
+      <%= form.label :recurring_date  %>
       <%= form.select_recurring :recurring, nil, allow_blank: true %>
     </abbr>
   </div>

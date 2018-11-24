@@ -6,7 +6,7 @@
   <thead>
     <tr>
       <th>Name</th>
-      <%# <th>Due date</th> %>
+      <%# <th>Due date</th>  %>
       <th>Recurring</th>
       <th>Amount due</th>
       <th>Income/Expense</th>
@@ -20,7 +20,7 @@
     <% @events.each do |event| %>
       <tr>
         <td><%= event.name %></td>
-        <%#<td><%= event.due_date %> <%#</td>%>
+        <%# <td><%= event.due_date %> </td>
         <td><%= event.recurring %></td>
         <td><%= event.amount_due %></td>
         <td><%= event.flow %></td>
