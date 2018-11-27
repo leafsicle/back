@@ -1,5 +1,6 @@
 {
-  "name": "back",
-  "private": true,
-  "dependencies": {}
+	"private": true,
+	"scripts": {
+		"install": "cd client && npm install && yarn build"
+	}
 }
