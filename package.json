@@ -3,6 +3,6 @@
 	"scripts": {
 		"build": "cd client && npm install && npm run build & cd..",
 		"deploy": "cp -a client/build/. public/",
-		"install": "npm run build && npm run deploy && echo 'client built!"
+		"install": "npm run build && npm run deploy && echo 'client built!'"
 	}
 }
