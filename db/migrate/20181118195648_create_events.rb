@@ -2,7 +2,7 @@ class CreateEvents < ActiveRecord::Migration[5.2]
   def change
     create_table :events do |t|
       t.string :name
-      t.date :due_date
+      t.integer :due_date
       t.json :recurring, null: false, default: {}
       t.integer :amount_due
       t.string :flow
