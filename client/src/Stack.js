@@ -22,7 +22,7 @@ class Stack extends Component {
 	updateTotals = () => {
 		let total = 0
 		this.state.events.forEach(event => {
-			if (event.flow === 'expense') {
+			if (event.flow === 'Expense') {
 				total -= event.amount_due
 			} else {
 				total += event.amount_due
