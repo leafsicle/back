@@ -74,3 +74,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'rack-cors'
 gem 'react-rails'
+gem 'nokogiri', '~> 1.6', '>= 1.6.8.1'
